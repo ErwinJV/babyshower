@@ -1,0 +1,21 @@
+
+.carousel-indicators {
+
+    display:none;
+}
+
+
+.detail,.home{
+
+    padding-bottom: 4rem;
+}
+
+.apartado ~ .apartar-regalo{
+
+     display: none !important;
+}
+
+footer{
+
+    height: 4rem;
+}
