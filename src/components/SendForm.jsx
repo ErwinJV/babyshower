@@ -107,7 +107,7 @@ const SendForm = ({ gift }) => {
                               background: 'rgba(88, 93, 112, .45 )',
                               backdrop: `
                                           rgba(255, 255, 255, 0)
-                                          url("${nyanCat}")
+                                          
                                           left top
                                           no-repeat`
                             }) 
