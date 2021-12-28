@@ -13,45 +13,56 @@ const GiftDetail = ({ id }) => {
   
    const gift  =   useGetGift(API);
    
-   
-  
-
-
- 
      return (
        
-      <div className="container-fluid bg-warning py-5  ">
+      <div className="gift-detail container-fluid    ">
         { 
         //Si ya la los datos solicitados se cargaron...
              (gift) ?    
                    
                    //Traemos los datos y los renderizamos
                    <div className="row ">
-                        <div className="col-12 col-md-7 ">
+                        <div className="col-12 col-xl-7 p-0 m-0  h-100 ">
                         
-                        <img src={ PATH +  gift.attributes.url_image } className="w-100 h-100 img-thumbnail" alt={ gift.attributes.nombre } />
+                        <img src={ PATH +  gift.attributes.url_image } className="img-fluid " alt={ gift.attributes.nombre } />
                         
                         </div>
 
-                        <div className="col-12 col-md-5 ">
-                            <h1 className='text-center text-capitalize'>{ gift.attributes.nombre }</h1>
+                        <div className="col-12 col-xl-5 p-0 m-0 ">
+                           
                             
-                            <div className="w-100 h-100 d-flex flex-column  justify-content-center ">
-                                    <a href={ gift.attributes.enlace } className="btn btn-primary mb-4 w-50 align-self-center">Ver en Tienda</a>
+                            <div className="w-100 h-100 d-flex flex-column ">
+                                
+                                 <div className='d-flex ver-tienda pt-4  flex-column w-100'>
+                                    <h1 className='text-center text-capitalize'>{ gift.attributes.nombre }</h1>
+                                     <a href={ gift.attributes.enlace } className="btn rounded-pill text-white mt-3 bg-announce align-self-center mb-4 w-50">Ver en Tienda</a>
+                                 </div>
+                                  
+                                 <SendForm gift={ gift }  />
+                                   
                                     
                                   {
                                      //
                                        (gift.attributes.apartado) 
-                                                           ? <Link to="/" className="apartado btn btn-info w-50 text-white text-decoration-none align-self-center" >
-                                                                   Ya esta apartado - Regresar
-                                                             </Link>
+                                                           ? 
+                                                             <div className='d-flex  flex-column quiero-apartar'>
+                                                                 <span className='btn btn-success rounded-pill w-50 align-self-center mb-2'>Apartado</span>
 
-                                                            :  <SendForm gift={ gift }  />
+                                                                <Link to="/" className="apartado my-3 btn btn-info w-50 text-white rounded-pill text-decoration-none align-self-center" >
+                                                                    Ver otros regalos
+                                                                </Link>
+                                                             </div>
+
+                                                            : '' 
                                       
                                   }
-                                   <Link to="/" className="d-none btn btn-info w-50 text-white text-decoration-none align-self-center" id='spanSuccess'>
-                                       Ya esta apartado - Regresar
-                                   </Link>
+                                    <div className='apartado d-none my-2 d-flex flex-column' id='apartado'>
+                                        <span className='btn btn-success rounded-pill w-50 align-self-center mb-2'>Apartado</span>
+
+                                            <Link to="/" className=" my-2 btn btn-info w-50 text-white rounded-pill text-decoration-none align-self-center" >
+                                                Ver otros regalos
+                                             </Link>
+                                                             </div>
 
                             </div>
                             
@@ -61,7 +72,7 @@ const GiftDetail = ({ id }) => {
          
          :       //Preloader
                    <div className="d-flex justify-content-center">
-                            <div className="spinner-border" role="status">
+                            <div className="spinner-border bg-primary" role="status">
                                 <span className="visually-hidden">Loading...</span>
                             </div>
                     </div>

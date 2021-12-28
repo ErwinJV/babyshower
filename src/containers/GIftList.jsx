@@ -7,16 +7,20 @@ const GIftList = () => {
    const gifts = useGetGifts(API);
    
    return (
-        <main className="container-fluid bg-primary py-3 my-3 ">
+        <div className="container-fluid gift-list py-3 my-3 px-0 ">
             
-            <div className="w-100 bg-success d-flex justify-content-center p-2 "><h3>Whislist</h3></div>
-            <div className="container h-auto">
-                <div className="row">
+            <div className="w-50 whishlist-text d-flex flex-column mx-auto p-2 ">
+                <h1 className='fs-2 fw-bolder align-self-center'>Whishlist</h1>
+                <p className='align-self-center fs-5 text-center '>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+            </div>
+            
+            <div className="container-fluid container-md h-auto">
+                <div className="row mx-2 ">
                   
             
                   {gifts.map(gift => (
                    
-                   <div className="col-12 col-md-6 col-lg-4 col-xl-3 h-100 mt-3"> 
+                   <div className="col-12 col-md-6 col-lg-4 col-xl-3  mt-3 "> 
                       <Gift gift ={gift} key={gift.id} />
                    </div>
 				))}
@@ -35,7 +39,7 @@ const GIftList = () => {
 
             </div>
 
-        </main>
+        </div>
     );
 };
 

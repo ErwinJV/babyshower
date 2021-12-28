@@ -1,8 +1,179 @@
-
-.carousel-indicators {
-
-    display:none;
+*{
+    font-family: 'Lato', sans-serif;
 }
+
+.nav-site img{
+
+    width: 120px;
+}
+.welcome{
+
+    background-color: #edf6f9;
+    
+}
+.welcome-header{
+    
+    width: 100% ;
+    height: calc(50vh);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-image: url('../assets/img/header.webp');
+    background-size: 280px;
+   
+    background-repeat: no-repeat;
+   
+    background-position: right bottom;
+
+}
+
+
+
+.welcome-text p{
+   font-family: 'Questrial', sans-serif;
+   color: #666666;
+   overflow:hidden;
+   width: 100%;
+}
+
+@media only screen and (min-width:1024px){
+    .welcome-header{
+    
+        padding-top: 0;
+        padding-bottom: 0;
+        height: calc(100vh - 120.52px);
+      
+        background-size: 640px 420px;
+        
+        background-position: center right;
+       
+    
+    }
+
+    .welcome-text{
+
+        top: 20%;
+    }
+
+    .welcome-text h1,.welcome-text p{
+
+        width: 70%;
+    }
+
+}
+
+
+
+.whishlist-text{
+
+     color:#697579;
+}
+
+.whishlist-text p{
+  
+    font-family: 'Questrial', sans-serif;
+    
+}
+
+.gift-list{
+
+    background: url('../assets/img/stars.webp') bottom right no-repeat fixed,
+    url('../assets/img/stars.webp') bottom left no-repeat fixed,
+    url('../assets/img/stars-s.webp') top left no-repeat fixed,
+    url('../assets/img/stars-s.webp') top right no-repeat fixed
+
+    
+}
+
+.time-counter .contenedor{
+
+     width: 100%;
+     height: 569px;
+
+     background: linear-gradient(to right, rgba(225,255,255,1) 0%,rgba(225,255,255,1) 7%,rgba(230,248,253,1) 24%,rgba(225,255,255,1) 49%,rgba(253,255,255,1) 49%,rgba(253,255,255,1) 49%,rgba(253,255,255,1) 49%,rgba(230,248,253,1) 49%,rgba(225,255,255,1) 49%,rgba(200,238,251,1) 50%,rgba(200,238,251,1) 50%,rgba(190,228,248,1) 75%,rgba(177,216,245,1) 100%); 
+}
+
+
+@media only screen and (max-width: 576px) {
+    .time-counter .clock{
+        min-width: 320px;
+        min-height: 320px;
+       
+        
+      }
+
+     
+  }
+
+  @media only screen and (min-width: 577px) {
+    .time-counter .clock{
+        width: 505px;
+        height: 
+        505px;
+         
+      
+      }
+     
+  }
+  .time-counter img{
+
+    width: 455px;
+    height: 569px;
+}
+
+
+
+
+.countdown > div{
+
+    background-color: #ededed;
+    color: #333333;
+    width: 70px;
+    height: 70px;
+    margin: 41px 10px 60px 0;
+   
+    
+    font-family:'Questrial', sans-serif ;
+    border-radius: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+@media only screen and (min-width:577px){
+    .countdown > div{
+
+        width: 85px;
+        height: 85px;
+    }  
+
+}
+
+.bg-announce{
+
+   background-color: 
+   #ff6363;
+}
+
+
+
+
+
+.contact{
+    height: 120px;
+    background-color: 
+    #fcd27c;
+}
+
+.contact .icon-ws{
+   
+    font-size: 130px;
+    color: #DDC477;
+   
+    
+
+
+}
+
 
 
 .detail,.home{
@@ -10,12 +181,38 @@
     padding-bottom: 4rem;
 }
 
+.quiero-apartar{
+
+    background-color: #c9e2eb;
+}
+
 .apartado ~ .apartar-regalo{
 
      display: none !important;
 }
 
+.modal-thanks{
+    width: 500px;
+    height: 500px;
+    
+   
+    background-color: rgba(88, 93, 112,.1) ;
+}
+
+.ver-tienda{
+
+    background-color: 
+    #edf6f9;
+    color: 
+    #04878f;
+}
+
 footer{
 
     height: 4rem;
+}
+
+.font-questrial{
+    font-family:'Questrial', sans-serif ;
+   color: #666666;
 }

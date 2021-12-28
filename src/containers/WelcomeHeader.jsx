@@ -1,24 +1,22 @@
 import React from 'react';
-import WelcomeSlider from '../components/WelcomeSlider';
+
+//import WelcomeSlider from '../components/WelcomeSlider';
 
 const WelcomeHeader = () => {
     return (
-        <div className="container-fluid bg-dark  p-3">
-            <div className="row">
-               <div className="col-12 col-md-4 bg-warning mb-3 mb-md-0">
-                
-                 <h1>Bienvenidos!</h1>
+        <div className='welcome container p-0'>
+           <div className='welcome-header position-relative  d-flex '>
+                <div className=' flex-column welcome-text position-absolute   mx-4 ' >
+                    <h1 className=' fs-md-1  m-0 p-0 ' >
+                        Lorem ipsum dolor sit amet,
+                        consectetur adipiscing
+                    </h1>
 
-                 <p class="fs-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi unde laborum dolores molestiae dicta iusto suscipit aliquid harum, enim, blanditiis itaque iure. Laboriosam tenetur illum suscipit debitis modi recusandae delectus.</p>
+                    <p className="m-0 p-0 fs-4  ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi unde laborum dolores mol. </p>
+                </div>
 
-               </div>
-               <div className="col-12 col-md-8">
-                <WelcomeSlider />
-
-               </div>
-
-                 
-            </div>
+              
+          </div>  
         </div>
     );
 };

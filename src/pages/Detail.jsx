@@ -9,7 +9,7 @@ const Detail = () => {
    console.log(useParams())
    const id = useParams();
     return (
-        <div className="detail  bg-secondary  position-relative" >
+        <div className="detail  position-relative" >
              <NavSite  />
           
             <GiftDetail id={id} />

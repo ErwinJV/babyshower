@@ -7,7 +7,7 @@ const Gift = ({ gift }) => {
 const API ="http://localhost:1337";
 
   return (
-        <Card className="mx-2 mb-3 h-100 w-100" >
+        <Card className="mx-md-2 mb-3 " >
         
         <img
           alt={  gift.attributes.nombre }
@@ -17,7 +17,7 @@ const API ="http://localhost:1337";
           height="180"
         />
         <CardBody className='position-relative d-flex flex-column align-items-center'>
-          <CardText className="align-self-start">
+          <CardText className="w-100 align-self-start text-center font-questrial fw-bolder ">
               { gift.attributes.nombre } 
           </CardText>
            
@@ -26,11 +26,11 @@ const API ="http://localhost:1337";
                {
                  
                    ( gift.attributes.apartado) 
-                                        ? <span className="apartado btn btn-danger ">Apartado</span>
+                                        ? <span className="apartado btn btn-secondary rounded-pill ">Apartado</span>
                                   
                 
-                                        : <Link to={ `/apartar-regalo/${gift.id}`} className='apartar-regalo btn btn-success'>
-                                             Apartar regalo 
+                                        : <Link to={ `/apartar-regalo/${gift.id}`} className='apartar-regalo btn bg-announce text-white rounded-pill '>
+                                             Get it
                                           </Link> 
              
                   }

@@ -7,22 +7,13 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 const Contact = () => {
     
     return (
-        <div className=" w-100 d-flex flex-column align-items-center justify-content-center  bg-success p-4">
+        <div className=" w-100 contact d-flex  align-items-center justify-content-around mt-3 ">
                  
-                 <h5 className="text-white">Tu Regalo no esta?</h5>
-                
-                <p className="text-white p-0 m-0">No hay problema, escribenos al:</p>
-                 <a href="#" className="w-100 d-flex justify-content-center  d-block text-decoration-none  ">
-                   
-                   <div className="d-inline-block">
+                <div className=' fs-4 align-self-center  ms-4  '>
+                  Lorem, ipsum dolor sit amet consectetur 
+                </div>
 
-                        <span className="text-white d-inline me-1 "> +57 565-55665</span>
-                            
-                        <FontAwesomeIcon className="text-white  fs-3 d-inline ml-2" icon={ faWhatsapp } />
-                     
-                   </div>
-                    
-                     </a>
+                <FontAwesomeIcon  icon={ faWhatsapp } className='icon-ws' />
             
         </div>
     );
