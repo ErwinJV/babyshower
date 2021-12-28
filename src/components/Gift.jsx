@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 
 
 const Gift = ({ gift }) => {
-const API ="http://localhost:1337";
+
 
   return (
         <Card className="mx-md-2 mb-3 " >
         
         <img
           alt={  gift.attributes.nombre }
-          src={ API + gift.attributes.url_image }
+          src={  gift.attributes.url_image }
           className="w-100  "
         
           height="180"

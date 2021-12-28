@@ -1,7 +1,7 @@
 import { useState, useEffect} from 'react';
 import axios from 'axios';
 
-const API = "http://localhost:1337/api/invitados"
+const API = process.env.REACT_APP_API_URL+ "/api/invitados"
 const useGetInvites= () => {
      
     const [invites, setInvites] = useState([]);

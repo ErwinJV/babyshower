@@ -2,7 +2,7 @@ import React from 'react';
 import Gift from '../components/Gift';
 import useGetGifts from '../hooks/useGetGifts';
 
-const API ='http://localhost:1337/api/regalos';
+const API = process.env.REACT_APP_API_URL + '/api/regalos';
 const GIftList = () => {
    const gifts = useGetGifts(API);
    

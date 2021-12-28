@@ -16,7 +16,7 @@ const SendForm = ({ gift }) => {
    
 
    // let navigate = useNavigate();
-    const PATH = "http://localhost:1337";
+    const PATH = process.env.REACT_APP_API_URL;
     const API_INVITADOS = PATH + "/api/invitados";
     const API_REGALOS =  PATH + `/api/regalos/${gift.id}`;
     const MySwal = withReactContent(Swal);

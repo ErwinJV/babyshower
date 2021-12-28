@@ -3,7 +3,7 @@ import { UncontrolledCarousel } from 'reactstrap';
 import useGetSliders from '../hooks/useGetSliders';
 
 const WelcomeSlider = () => {
-  const PATH = "http://localhost:1337";
+  const PATH = process.env.REACT_APP_API_URL;
   const sliders = useGetSliders();
  
   

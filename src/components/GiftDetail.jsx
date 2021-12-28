@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom';
 
 
 const GiftDetail = ({ id }) => {
-   const PATH = "http://localhost:1337";
+   const PATH = process.env.REACT_APP_API_URL;
    const query = `/api/regalos/${id.id}`;
    const API = PATH + query;
   
@@ -24,7 +24,7 @@ const GiftDetail = ({ id }) => {
                    <div className="row ">
                         <div className="col-12 col-xl-7 p-0 m-0  h-100 ">
                         
-                        <img src={ PATH +  gift.attributes.url_image } className="img-fluid " alt={ gift.attributes.nombre } />
+                        <img src={ gift.attributes.url_image } className="img-fluid " alt={ gift.attributes.nombre } />
                         
                         </div>
 
