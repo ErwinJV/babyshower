@@ -12,7 +12,7 @@ const useGetGift= (API) => {
          response = response.data;
         setGift(response.data);
           
-     }, [])
+     }, [API])
 
     
    

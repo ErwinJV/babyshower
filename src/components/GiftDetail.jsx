@@ -21,7 +21,7 @@ const GiftDetail = ({ id }) => {
              (gift) ?    
                    
                    //Traemos los datos y los renderizamos
-                   <div className="row ">
+                   <div className="row fix-reflow ">
                         <div className="col-12 col-xl-7 p-0 m-0  h-100 ">
                         
                         <img src={ gift.attributes.url_image } className="img-fluid " alt={ gift.attributes.nombre } />
@@ -62,7 +62,7 @@ const GiftDetail = ({ id }) => {
                                             <Link to="/" className=" my-2 btn btn-info w-50 text-white rounded-pill text-decoration-none align-self-center" >
                                                 Ver otros regalos
                                              </Link>
-                                                             </div>
+                                      </div>
 
                             </div>
                             

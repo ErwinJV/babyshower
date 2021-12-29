@@ -1,35 +1,28 @@
 import React, { useRef } from 'react';
-import { Modal, Button, ModalHeader, ModalBody, ModalFooter,  } from 'reactstrap';
-//import {useNavigate}  from 'react-router-dom';
-import starleft from '../assets/img/happy-star-left.webp';
-import starright from '../assets/img/happy-star-right.webp';
+
+import {useNavigate}  from 'react-router-dom';
+
 
 import axios from 'axios';
 
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
-import nyanCat from '../assets/gif/nyan-cat-nyan.gif';
-import happyStart from '../assets/img/happy-face.png';
+
+import twinStars from '../assets/img/estrellitas.webp';
 
 
 const SendForm = ({ gift }) => {
    
 
-   // let navigate = useNavigate();
+    
     const PATH = process.env.REACT_APP_API_URL;
     const API_INVITADOS = PATH + "/api/invitados";
     const API_REGALOS =  PATH + `/api/regalos/${gift.id}`;
     const MySwal = withReactContent(Swal);
 
-    const blockInput = (gift.attributes.apartado) ? "disabled" : '';
-   
-   
-    
-    
-
     const form = useRef(null);
-   let nombre;
-   console.log(nombre)
+    let navigate = useNavigate();
+    
     let data = {
 
         nombre: '',
@@ -61,78 +54,105 @@ const SendForm = ({ gift }) => {
       })
      }
 		   else{
-          await axios.post(API_INVITADOS,{
-            data: {
-              nombre: data.nombre,
-              apellido: data.apellido,
-              email: data.email,
-              regalo: data.id
-
-            }
         
-        })
-          .then( async function (response) {
-            
-            if(response.status === 200){
-
-                await axios.put(API_REGALOS,{
-                    data: {
-                     
-                      apartado: true
-          
-                    }
-                  
-                  })
-                  .then(function (response) {
-
-                    if(response.status === 200){
-                   document.getElementById('nombre').setAttribute("disabled", "true")
-                   document.getElementById('apellido').setAttribute("disabled", "true")
-                   document.getElementById('email').setAttribute("disabled", "true")
-                   document.getElementById('apartarRegalo').classList.add('d-none')
-                   document.getElementById('apartado').classList.remove('d-none')
-                    MySwal.fire({
-                             
-                      
-                            
-                              text: 'Muchas gracias!',
-                              imageUrl: happyStart,
-                              color: 'white',
-                              imageWidth: 320,
-                              imageHeight: 240,
-                              confirmButtonText:
-                                              'Listo',
-                            
-                              imageAlt: 'Happy-star',
-                              background: 'rgba(88, 93, 112, .45 )',
-                              backdrop: `
-                                          rgba(255, 255, 255, 0)
-                                          
-                                          left top
-                                          no-repeat`
-                            }) 
-
-                 }
-
-             })  
+        await axios.get(API_REGALOS)
+            .then( async response => {
+                
+              if(!response.data.data.attributes.apartado){
+               
+                await axios.post(API_INVITADOS,{
+                  data: {
+                    nombre: data.nombre,
+                    apellido: data.apellido,
+                    email: data.email,
+                    regalo: data.id
       
-      }
-        
-                 
-     })
-      .then(function () {
+                  }
+              
+              })
+                .then( async function (response) {
+                  
+                  if(response.status === 200){
+      
+                      await axios.put(API_REGALOS,{
+                          data: {
+                           
+                            apartado: true
+                
+                          }
+                        
+                        })
+                        .then(function (response) {
+      
+                          if(response.status === 200){
+                         document.getElementById('nombre').setAttribute("disabled", "true")
+                         document.getElementById('apellido').setAttribute("disabled", "true")
+                         document.getElementById('email').setAttribute("disabled", "true")
+                         document.getElementById('apartarRegalo').classList.add('d-none')
+                         document.getElementById('apartado').classList.remove('d-none')
+                          MySwal.fire({
+                                   
+                            
+                                  
+                                    title: 'Muchas gracias!',
+                                    text: 'Vamos a ver otros regalos',
+                                    imageUrl: twinStars,
+                                    confirmButtonText: '<button>Hola</button>',
+                                    timer:5000,
+                                    color: 'white',
+                                    imageWidth: 320,
+                                    imageHeight: 240,
+                                    imageAlt: 'Happy-star',
+                                    background: 'rgba(88, 93, 112, .45 )',
+                                    backdrop: `
+                                                rgba(255, 255, 255, 0)
+                                                
+                                                left top
+                                                no-repeat`
+                                  }) 
+      
+                       }
+      
+                   })  
             
+            }
+              
+                       
+           })
+
+
+       } else {
+             
+        
+            MySwal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'El regalo se acabo de apartar hace unos instantes',
+            
+            })
+                navigate('/') 
+       }
+
+       })
+       .then(function () {
+      
+         setTimeout( () => {
+           
+           navigate('/')
+         
+        },5000)
+   
+      
                 
-                
-   })
-     .catch(function (error) {
+     })
+       .catch(function (error) {
     
             console.log(error)
-    })
+      })
   }  
 }
    
-  /*   */
+
 
     return (
     
