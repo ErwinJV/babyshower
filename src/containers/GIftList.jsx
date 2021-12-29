@@ -10,8 +10,13 @@ const GIftList = () => {
         <div className="container-fluid gift-list py-3 my-3 px-0 ">
             
             <div className="w-50 whishlist-text d-flex flex-column mx-auto p-2 ">
-                <h1 className='fs-2 fw-bolder align-self-center'>Whishlist</h1>
-                <p className='align-self-center fs-5 text-center '>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                <h1 className='fs-2 fw-bolder align-self-center'>
+                    Nuestro Whishlist.
+                </h1>
+                <p className='align-self-center fs-5 text-center '>
+                    Aparta tu presente entre las opciones que dejaron mami y papi a continuación, si no consigues algo disponible ve al final de la página.
+                </p>
+                <p>NOTA: Mami y Papi no sabrán quién aparto los regalos hasta el día de nuestro Babyshower. </p>
             </div>
             
             <div className="container-fluid container-md h-auto">

@@ -10,7 +10,7 @@ const Contact = () => {
         <div className=" w-100 contact d-flex  align-items-center justify-content-around mt-3 ">
                  
                 <div className=' fs-4 align-self-center  ms-4  '>
-                  Lorem, ipsum dolor sit amet consectetur 
+                Si tienes alguna inquietud, te puedes comunicar con Mami o Papi por este medio. 
                 </div>
 
                 <FontAwesomeIcon  icon={ faWhatsapp } className='icon-ws' />
