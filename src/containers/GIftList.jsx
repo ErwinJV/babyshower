@@ -10,7 +10,7 @@ const GIftList = () => {
         <div className="container-fluid gift-list py-3 my-3 px-0 ">
             
             <div className="w-50 whishlist-text d-flex flex-column mx-auto p-2 ">
-                <h1 className='fs-2 fw-bolder align-self-center'>
+                <h1 className='fs-2 fw-bolder text-center'>
                     Nuestro Whishlist.
                 </h1>
                 <p className='align-self-center fs-5 text-center '>
