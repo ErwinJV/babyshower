@@ -7,7 +7,7 @@ const WelcomeHeader = () => {
         <div className='welcome container p-0'>
            <div className='welcome-header position-relative  d-flex '>
                 <div className=' flex-column welcome-text position-absolute   mx-4 ' >
-                    <h1 className=' fs-md-1  m-0 p-0 ' >
+                    <h1 className=' fs-md-1  me-0 ms-0 mb-3 p-0 ' >
                     ¡BIENVENIDOS A NUESTRO MUNDO!
 
                     </h1>

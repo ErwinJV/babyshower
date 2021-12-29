@@ -16,7 +16,7 @@ const GIftList = () => {
                 <p className='align-self-center fs-5 text-center '>
                     Aparta tu presente entre las opciones que dejaron mami y papi a continuación, si no consigues algo disponible ve al final de la página.
                 </p>
-                <p>NOTA: Mami y Papi no sabrán quién aparto los regalos hasta el día de nuestro Babyshower. </p>
+                <p className='text-center'>NOTA: Mami y Papi no sabrán quién aparto los regalos hasta el día de nuestro Babyshower. </p>
             </div>
             
             <div className="container-fluid container-md h-auto">
