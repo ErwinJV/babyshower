@@ -1,6 +1,6 @@
 import React from 'react';
 
-//import WelcomeSlider from '../components/WelcomeSlider';
+
 
 const WelcomeHeader = () => {
     return (
