@@ -77,7 +77,7 @@ const Pagos = () => {
 
   return (
     <div className="bg-light d-flex flex-column p-4 justify-content-center">
-      <p className="align-self-center my-3 text-center">
+      <p className="align-self-center my-3 text-center fs-3">
         Si deseas darnos un regalo en efectivo, aqui estan estas opciones
       </p>
       <div className="container-fluid">

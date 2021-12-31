@@ -9,7 +9,7 @@ const ThankYou = () => {
    const [minutes, setMinutes] = useState();
    const [days,setDays] = useState()
 
-    let deadline = 'Jan 20 2022 10:32:53 GMT-0500'
+    let deadline = 'Feb 05 2022 10:32:53 GMT-0500'
 
      
 
