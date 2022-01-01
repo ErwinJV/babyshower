@@ -14,27 +14,12 @@ const Pagos = () => {
     MySwal.fire({
       background: "rgba(88, 93, 112, .45 )",
       title: "Zelle:",
-      text: "email@example.com",
+      text: "mitri.gd@gmail.com",
       color: "white",
       backdrop: "rgba(255, 255, 255, 0)",
     });
   };
-  const wompi = () => {
-    MySwal.fire({
-      html: `<form action="https://checkout.wompi.co/p/" method="GET">
-                 <!-- OBLIGATORIOS -->
-                 <input type="hidden" name="public-key" value="LLAVE_PUBLICA_DEL_COMERCIO" />
-                 <input type="hidden" name="currency" value="MONEDA" />
-                 <input type="hidden" name="amount-in-cents" value="MONTO_EN_CENTAVOS" />
-                 <input type="hidden" name="reference" value="REFERENCIA_DE_PAGO" />
-                 <!-- OPCIONALES -->
-                
-                 <input type="hidden" name="redirect-url" value="URL_REDIRECCION" />
-                 
-                 <button type="submit">Pagar con Wompi</button>
-               </form>`,
-    });
-  };
+
   //Paypal funcs y config
   const createOrder = (data, actions) => {
     return actions.order.create({
@@ -51,24 +36,20 @@ const Pagos = () => {
   const handlePay = () => {
     console.log("El pago ha sido exitoso");
 
-     navigate("/");
+    navigate("/");
 
-     MySwal.fire({
-        
-        icon: 'success',
-        title: 'Transaccion Exitosa',
-        showConfirmButton: true,
-        
-      })
-  }
+    MySwal.fire({
+      icon: "success",
+      title: "Transaccion Exitosa",
+      showConfirmButton: true,
+    });
+  };
 
   const onApprove = (data, actions) => {
     return actions.order.capture(handlePay());
   };
 
   const [pricePaypal, setPricePaypal] = useState(0);
-
- 
 
   function handleChange(e) {
     setPricePaypal(e.target.value);
@@ -108,18 +89,21 @@ const Pagos = () => {
               />
             </div>
           </div>
-          <div className="col-12 col-md-4">
-            <div className="d-flex justify-content-center p-2">
+          <div className="col-12 col-md-4 d-flex align-items-center justify-content-center">
+            <div className="d-flex justify-content-center  p-2">
               <Button color="success" onClick={() => zelle()}>
                 Zelle
               </Button>
             </div>
           </div>
-          <div className="col-12 col-md-4">
-            <div className="d-flex justify-content-center p-2">
-              <Button color="info" onClick={() => wompi()}>
-                Wompi
-              </Button>
+          <div className="col-12 col-md-4 d-flex align-items-center justify-content-center">
+            <div className="d-flex justify-content-center  p-2">
+              <a href="https://checkout.wompi.co/l/VPOS_PyGzJw"
+              target={"_blank"}
+              >
+                <Button color="primary">Wompi</Button>
+              </a>
+              
             </div>
           </div>
         </div>
