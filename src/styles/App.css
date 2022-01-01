@@ -1,248 +1,223 @@
-*{
-    font-family: 'Lato', sans-serif;
+* {
+  font-family: "Lato", sans-serif;
 }
 
-.nav-site img{
-
-    width: 120px;
+.nav-site img {
+  width: 120px;
 }
-.welcome{
-
-    background-color: #edf6f9;
-    
+.welcome {
+  background-color: #edf6f9;
 }
-.welcome-header{
-    
-    width: 100% ;
-    height: 105vh;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    background-image: url('../assets/img/header.webp');
-    background-size: 90vw;
-   
-    background-repeat: no-repeat;
-   
-    background-position: right bottom;
+.welcome-header {
+  width: 100%;
+  height: 105vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-image: url("../assets/img/header.webp");
+  background-size: 90vw;
 
+  background-repeat: no-repeat;
+
+  background-position: right bottom;
 }
 
-@media only screen and (min-width:577px){
-
-    .welcome-header{
-        height: 100vh;
-
-    }
+@media only screen and (min-width: 577px) {
+  .welcome-header {
+    height: 100vh;
+  }
 }
 
-@media only screen and (min-width:768px){
-    .welcome-header{
-    
-        padding-top: 0;
-        padding-bottom: 0;
-        
-      
-        background-size: 640px 420px;
-        
-        background-position: bottom right;
-       
-    
-    }
+@media only screen and (min-width: 768px) {
+  .welcome-header {
+    padding-top: 0;
+    padding-bottom: 0;
 
-    .welcome-text{
+    background-size: 640px 420px;
 
-        top: 10%;
-    }
+    background-position: bottom right;
+  }
 
-    .welcome-text h1,.welcome-text p{
+  .welcome-text {
+    top: 10%;
+  }
 
-        width: 70%;
-    }
-
+  .welcome-text h1,
+  .welcome-text p {
+    width: 70%;
+  }
 }
 
-
-
-
-.welcome-text p{
-   font-family: 'Questrial', sans-serif;
-   color: #666666;
-   overflow:hidden;
-   width: 100%;
+.welcome-text p {
+  font-family: "Questrial", sans-serif;
+  color: #666666;
+  overflow: hidden;
+  width: 100%;
 }
 
-
-
-
-.whishlist-text h1{
-
-     color:#697579;
-    
+.whishlist-text h1 {
+  color: #697579;
 }
 
-.whishlist-text p{
-  
-    font-family: 'Questrial', sans-serif;
-    
+.whishlist-text p {
+  font-family: "Questrial", sans-serif;
 }
 
-.gift-list{
-
-    background: url('../assets/img/stars.webp') bottom right no-repeat fixed,
-    url('../assets/img/stars.webp') bottom left no-repeat fixed,
-    url('../assets/img/stars-s.webp') top left no-repeat fixed,
-    url('../assets/img/stars-s.webp') top right no-repeat fixed
-
-    
+.gift-list {
+  background: url("../assets/img/stars.webp") bottom right no-repeat fixed,
+    url("../assets/img/stars.webp") bottom left no-repeat fixed,
+    url("../assets/img/stars-s.webp") top left no-repeat fixed,
+    url("../assets/img/stars-s.webp") top right no-repeat fixed;
 }
 
+.time-counter .contenedor {
+  width: 100%;
+  height: 569px;
 
-.time-counter .contenedor{
-
-     width: 100%;
-     height: 569px;
-
-     background: linear-gradient(to right, rgba(225,255,255,1) 0%,rgba(225,255,255,1) 7%,rgba(230,248,253,1) 24%,rgba(225,255,255,1) 49%,rgba(253,255,255,1) 49%,rgba(253,255,255,1) 49%,rgba(253,255,255,1) 49%,rgba(230,248,253,1) 49%,rgba(225,255,255,1) 49%,rgba(200,238,251,1) 50%,rgba(200,238,251,1) 50%,rgba(190,228,248,1) 75%,rgba(177,216,245,1) 100%); 
+  background: linear-gradient(
+    to right,
+    rgba(225, 255, 255, 1) 0%,
+    rgba(225, 255, 255, 1) 7%,
+    rgba(230, 248, 253, 1) 24%,
+    rgba(225, 255, 255, 1) 49%,
+    rgba(253, 255, 255, 1) 49%,
+    rgba(253, 255, 255, 1) 49%,
+    rgba(253, 255, 255, 1) 49%,
+    rgba(230, 248, 253, 1) 49%,
+    rgba(225, 255, 255, 1) 49%,
+    rgba(200, 238, 251, 1) 50%,
+    rgba(200, 238, 251, 1) 50%,
+    rgba(190, 228, 248, 1) 75%,
+    rgba(177, 216, 245, 1) 100%
+  );
 }
-
 
 @media only screen and (max-width: 576px) {
-    .time-counter .clock{
-        min-width: 320px;
-        min-height: 320px;
-       
-        
-      }
-
-     
+  .time-counter .clock {
+    min-width: 320px;
+    min-height: 320px;
   }
+}
 
-  @media only screen and (min-width: 577px) {
-    .time-counter .clock{
-        width: 505px;
-        height: 
-        505px;
-         
-      
-      }
-     
+@media only screen and (min-width: 577px) {
+  .time-counter .clock {
+    width: 505px;
+    height: 505px;
   }
-  .time-counter img{
-
-    width: 455px;
-    height: 569px;
+}
+.time-counter img {
+  width: 455px;
+  height: 569px;
 }
 
+.countdown > div {
+  background-color: #ededed;
+  color: #333333;
+  width: 70px;
+  height: 70px;
+  margin: 41px 10px 60px 0;
 
-
-
-.countdown > div{
-
-    background-color: #ededed;
-    color: #333333;
-    width: 70px;
-    height: 70px;
-    margin: 41px 10px 60px 0;
-   
-    
-    font-family:'Questrial', sans-serif ;
-    border-radius: 50%;
-    margin-top: 0;
-    margin-bottom: 0;
-
+  font-family: "Questrial", sans-serif;
+  border-radius: 50%;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-@media only screen and (min-width:577px){
-    .countdown > div{
-
-        width: 85px;
-        height: 85px;
-    }  
-
+@media only screen and (min-width: 577px) {
+  .countdown > div {
+    width: 85px;
+    height: 85px;
+  }
 }
 
-.bg-announce{
-
-   background-color: 
-   #ff6363;
+.bg-announce {
+  background-color: #ff6363;
 }
 
-
-
-
-
-.contact{
-    height: 120px;
-    background-color: 
-    #fcd27c;
+.contact {
+  height: 120px;
+  background-color: #fcd27c;
 }
 
-.contact .icon-ws{
-   
-    font-size: 130px;
-    color: #DDC477;
-   
-    
-
-
+.contact .icon-ws {
+  font-size: 130px;
+  color: #ddc477;
 }
 
-
-
-.detail,.home{
-
-    padding-bottom: 4rem;
+.detail,
+.home {
+  padding-bottom: 4rem;
 }
 
-.quiero-apartar{
-
-    background-color: #c9e2eb;
+.quiero-apartar {
+  background-color: #c9e2eb;
 }
 
-.apartado ~ .apartar-regalo{
-
-     display: none !important;
+.apartado ~ .apartar-regalo {
+  display: none !important;
 }
 
-.modal-thanks{
-    width: 500px;
-    height: 500px;
-    
-   
-    background-color: rgba(88, 93, 112,.1) ;
+.modal-thanks {
+  width: 500px;
+  height: 500px;
+
+  background-color: rgba(88, 93, 112, 0.1);
 }
 
-.ver-tienda{
-
-    background-color: 
-    #edf6f9;
-    color: 
-    #04878f;
+.ver-tienda {
+  background-color: #edf6f9;
+  color: #04878f;
 }
 
-footer{
-
-    height: 4rem;
+footer {
+  height: 4rem;
 }
 
-.font-questrial{
-    font-family:'Questrial', sans-serif ;
-   color: #666666;
+.font-questrial {
+  font-family: "Questrial", sans-serif;
+  color: #666666;
 }
 
 .whatsapp {
-   /* position:fixed; */
-    width:60px;
-    height:60px;
+  /* position:fixed; */
+  width: 60px;
+  height: 60px;
   /*  bottom:40px; */
   /*  right:40px; */
-    background-color:#25d366;
-    color:#FFF;
-    border-radius:50px;
-    text-align:center;
-    font-size:30px;
-   /* z-index:100; */
-  }
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  /* z-index:100; */
+}
 
-  .whatsapp-icon {
-    margin-top:13px;
-  }
+.whatsapp-icon {
+  margin-top: 13px;
+}
+
+.tooltip-box {
+  position: absolute;
+  left: -50;
+  bottom: 70px;
+  width: 70vw;
+  background-color: #000;
+  line-height: 20px;
+  z-index: 500;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 11px;
+}
+
+.tooltip-box::after{
+
+    content: "";
+    display: block;
+    border-top: 7px solid black;
+    border-left: 20px solid  transparent;
+    border-right: 20px solid transparent;
+    position:absolute;
+    bottom: -7px;
+    left: 43%;
+
+}
