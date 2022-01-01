@@ -63,30 +63,43 @@ const Pagos = () => {
       </p>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-12 col-md-4">
-            <div className="d-flex flex-column justify-content-around">
-              <div className="mb-3">
-                <label htmlFor className="form-label" />
-                <input
-                  type="number"
-                  value={pricePaypal}
-                  className="form-control"
-                  min="0"
-                  max="10000"
-                  name
-                  id
-                  aria-describedby="helpId"
-                  onChange={handleChange}
-                />
-                <small id="helpId" className="form-text text-muted">
-                  Monto a transferir
-                </small>
-              </div>
+          <div className="col-12 col-md-4  d-flex align-items-center justify-content-center">
+            {/*
+                
+                <div className="d-flex flex-column justify-content-around">
+                      <div className="mb-3">
+                        <label htmlFor className="form-label" />
+                        <input
+                          type="number"
+                          value={pricePaypal}
+                          className="form-control"
+                          min="0"
+                          max="10000"
+                          name
+                          id
+                          aria-describedby="helpId"
+                          onChange={handleChange}
+                        />
+                        <small id="helpId" className="form-text text-muted">
+                          Monto a transferir
+                        </small>
+                      </div>
 
-              <PayPalButton
-                createOrder={(data, actions) => createOrder(data, actions)}
-                onApprove={(data, actions) => onApprove(data, actions)}
-              />
+                    <PayPalButton
+                    createOrder={(data, actions) => createOrder(data, actions)}
+                    onApprove={(data, actions) => onApprove(data, actions)}
+                  />
+                </div>
+          
+         */}
+
+            <div className="d-flex justify-content-center  p-2">
+              <a
+                href="https://paypal.me/soyderwin/"
+                target={"_blank"}
+              >
+                <Button color="warning">Paypal</Button>
+              </a>
             </div>
           </div>
           <div className="col-12 col-md-4 d-flex align-items-center justify-content-center">
@@ -98,12 +111,12 @@ const Pagos = () => {
           </div>
           <div className="col-12 col-md-4 d-flex align-items-center justify-content-center">
             <div className="d-flex justify-content-center  p-2">
-              <a href="https://checkout.wompi.co/l/VPOS_PyGzJw"
-              target={"_blank"}
+              <a
+                href="https://checkout.wompi.co/l/VPOS_PyGzJw"
+                target={"_blank"}
               >
                 <Button color="primary">Wompi</Button>
               </a>
-              
             </div>
           </div>
         </div>
