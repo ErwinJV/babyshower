@@ -120,7 +120,7 @@ const SendForm = ({ gift }) => {
   };
 
   return (
-    <div className="quiero-apartar  px-5 py-3 d-flex flex-column justify-content-center">
+    <div className="quiero-apartar  px-5 pt-3 pb-5 d-flex flex-column justify-content-center">
       <form action="/" className="d-flex flex-column" ref={form}>
         <div className="mb-3">
           <label htmlFor="nombre" className="form-label">

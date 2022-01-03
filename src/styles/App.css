@@ -221,3 +221,7 @@ footer {
     left: 43%;
 
 }
+
+.image-detail{
+  max-height: 560px;
+}

@@ -5,7 +5,7 @@ import withReactContent from "sweetalert2-react-content";
 import ReactDOM from "react-dom";
 import { useNavigate } from "react-router-dom";
 
-const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
+
 
 const Pagos = () => {
   let navigate = useNavigate();

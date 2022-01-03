@@ -22,9 +22,9 @@ const GiftDetail = ({ id }) => {
                    
                    //Traemos los datos y los renderizamos
                    <div className="row fix-reflow ">
-                        <div className="col-12 col-xl-7 p-0 m-0  h-100 ">
+                        <div className="col-12 col-xl-7 p-0 m-0 ">
                         
-                        <img src={ gift.attributes.url_image } className="img-fluid " alt={ gift.attributes.nombre } />
+                        <img src={ gift.attributes.url_image } className="w-100 image-detail" alt={ gift.attributes.nombre } />
                         
                         </div>
 
