@@ -35,7 +35,7 @@ const GiftDetail = ({ id }) => {
                                 
                                  <div className='d-flex ver-tienda pt-4  flex-column w-100'>
                                     <h1 className='text-center text-capitalize'>{ gift.attributes.nombre }</h1>
-                                     <a href={ gift.attributes.enlace } className="btn rounded-pill text-white mt-3 bg-announce align-self-center mb-4 w-50">Ver en Tienda</a>
+                                     <a href={ gift.attributes.enlace } target={"_blank"} className="btn rounded-pill text-white mt-3 bg-announce align-self-center mb-4 w-50">Ver en Tienda</a>
                                  </div>
                                   
                                  <SendForm gift={ gift }  />
