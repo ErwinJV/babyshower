@@ -7,32 +7,56 @@ import axios from "axios";
 
 const GIftList = () => {
   const API = process.env.REACT_APP_API_URL + `/api/regalos`;
-
+  const [total,setTotal] = useState()
   const [gifts, setGifts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [giftsPerPage, setPostPerPage] = useState(4);
+  const [giftsPerPage, setGiftsPerPage] = useState(4);
   console.log(giftsPerPage);
   useEffect(() => {
     const fetchGifts = async () => {
       setLoading(true);
       const res = await axios.get(API);
       setGifts(res.data.data);
+      let total = Math.ceil( gifts.length / giftsPerPage);
+      setTotal(total)
       setLoading(false);
+      
     };
 
     fetchGifts();
   }, []);
 
   //Obtener regalos
-
+  
   const indexOfLastGift = currentPage * giftsPerPage;
   const indexOfFirstGift = indexOfLastGift - giftsPerPage;
   const currentGifts = gifts.slice(indexOfFirstGift, indexOfLastGift);
-
+  console.log(total)
   //cambiar pagina
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber)
+  const next = () => {
+     // console.log(total,'total', currentPage)
+      if(currentPage === total ){
+
+          setCurrentPage(total)
+      }else{
+
+         setCurrentPage(currentPage + 1)
+      }
+  }
+
+  const prev = () => {
+
+    if(currentPage === 1 ){
+
+        setCurrentPage(currentPage)
+    }else{
+
+       setCurrentPage(currentPage - 1)
+    }
+}
 
   return (
     <div className="container-fluid gift-list py-3 my-3 px-0 ">
@@ -62,6 +86,9 @@ const GIftList = () => {
         totalItems={gifts.length}
         loading={loading}
         paginate={paginate}
+        currentPage={currentPage}
+        next={next}
+        prev={prev}
       />
     </div>
   );

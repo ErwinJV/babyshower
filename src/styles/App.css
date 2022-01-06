@@ -37,6 +37,7 @@
     background-position: bottom right;
   }
 
+ 
   .welcome-text {
     top: 10%;
   }
@@ -46,6 +47,29 @@
     width: 70%;
   }
 }
+
+
+@media  (min-width: 1768px ) {
+  .welcome-header {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    background-size: 920px 560px;
+
+    background-position: right 10% bottom 10%;
+  }
+
+ 
+  
+
+  .welcome-text h1 {
+      font-size: 3rem;
+  }
+  .welcome-text p {
+    font-size: 2.5rem !important;
+}
+}
+
 
 .welcome-text p {
   font-family: "Questrial", sans-serif;
