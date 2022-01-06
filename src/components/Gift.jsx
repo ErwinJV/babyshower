@@ -3,11 +3,27 @@ import { Card, CardBody, CardText } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 
-const Gift = ({ gift }) => {
+const Gift = ({ gifts, loading }) => {
+ 
+  if(loading){
 
+     return <div class="d-flex justify-content-center">
+     <div class="spinner-border" role="status">
+       <span class="visually-hidden">Loading...</span>
+     </div>
+   </div>
+  }
+  
 
   return (
-        <Card className="mx-md-2 mb-3 " >
+        
+    <div className='row mx-2'>
+      {
+      
+      gifts.map(gift => (
+          
+        <div className="col-12 col-md-6 col-lg-4 col-xl-3  mt-3 ">
+              <Card className="mx-md-2 mb-3 " >
         
         <img
           alt={  gift.attributes.nombre }
@@ -38,6 +54,15 @@ const Gift = ({ gift }) => {
               
         </CardBody>
       </Card>
+        </div>
+
+      ))
+
+    }   
+    
+    </div>
+       
+      
     );
 };
 
