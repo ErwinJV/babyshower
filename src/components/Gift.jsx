@@ -45,7 +45,7 @@ const Gift = ({ gifts, loading }) => {
                                         ? <span className="apartado btn btn-secondary rounded-pill ">Apartado</span>
                                   
                 
-                                        : <Link to={ `/apartar-regalo/${gift.id}`} className='apartar-regalo btn align-self-center position-absolute  bg-announce text-white rounded-pill '>
+                                        : <Link to={ `/apartar-regalo/${gift.id}`} className='apartar-regalo btn align-self-center   bg-announce text-white rounded-pill '>
                                              Get it
                                           </Link> 
              
