@@ -69,6 +69,16 @@
     url("../assets/img/stars-s.webp") top right no-repeat fixed;
 }
 
+.gift{
+
+    height: 300px;
+}
+
+.gift img{
+
+  object-fit: cover;
+}
+
 .time-counter .contenedor {
   width: 100%;
   height: 569px;

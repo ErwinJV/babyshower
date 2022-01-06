@@ -23,7 +23,7 @@ const Gift = ({ gifts, loading }) => {
       gifts.map(gift => (
           
         <div className="col-12 col-md-6 col-lg-4 col-xl-3  mt-3 ">
-              <Card className="mx-md-2 mb-3 " >
+     <Card className="gift mx-md-2 mb-3  " >
         
         <img
           alt={  gift.attributes.nombre }
