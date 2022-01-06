@@ -21,8 +21,8 @@ const Pagination = ({ itemsPerPage, totalItems, loading, paginate }) => {
   }
 
   return (
-    <nav aria-label="Page navigation example">
-      <ul className="pagination justify-content-center">
+    <nav aria-label="Page navigation example" className="">
+      <ul className="pagination pagination-sm  justify-content-center">
         {pageNumbers.map((number) => (
           <li key={number} class="page-item">
             <span onClick={() => paginate(number)} class="page-link" >
