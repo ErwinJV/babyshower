@@ -11,7 +11,7 @@ const GIftList = () => {
   const [gifts, setGifts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [giftsPerPage, setPostPerPage] = useState(10);
+  const [giftsPerPage, setPostPerPage] = useState(4);
   console.log(giftsPerPage);
   useEffect(() => {
     const fetchGifts = async () => {
