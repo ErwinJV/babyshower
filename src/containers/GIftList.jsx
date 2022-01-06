@@ -40,7 +40,7 @@ const GIftList = () => {
      // console.log(total,'total', currentPage)
       if(currentPage === total ){
 
-          setCurrentPage(total)
+          setCurrentPage(currentPage)
       }else{
 
          setCurrentPage(currentPage + 1)

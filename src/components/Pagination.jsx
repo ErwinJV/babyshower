@@ -9,23 +9,13 @@ const Pagination = ({
   next,
   prev,
 }) => {
-  if (loading) {
-    return (
-      <div class="d-flex justify-content-center">
-        <div class="spinner-border" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </div>
-    );
-  }
+  
 
   let totalPages = Math.ceil(totalItems / itemsPerPage);
   let maxPages = totalPages - 3;
   let pages = currentPage + 3;
 
-  // let limit = (currentPage < maxPages) ? pages : totalPages
-
-  // let i = ((currentPage < 4) || (currentPage < maxPages)) ? 1 : (currentPage - 3)
+  
   let i;
   let limit;
   if (
@@ -48,7 +38,7 @@ const Pagination = ({
   console.log(limit, " ", currentPage);
   return (
     <nav aria-label="Page navigation example" className="px-2">
-      <ul className="pagination pagination-sm  justify-content-center">
+      <ul className="pagination   justify-content-center">
         <li className="page-item " onClick={() => prev()}>
           <span className="page-link" aria-label="Previous">
             <span aria-hidden="true">«</span>
@@ -59,7 +49,7 @@ const Pagination = ({
           <li
             key={number}
             className={
-              currentPage === number ? "page-item active" : "page-item"
+              currentPage === number ? "page-item active animate__animated animate__fadeIn animate__delay-2s" : "page-item"
             }
           >
             <span onClick={() => paginate(number)} class="page-link">
