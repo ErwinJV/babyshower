@@ -41,6 +41,7 @@ const GIftList = () => {
       if(currentPage === total ){
 
           setCurrentPage(currentPage)
+        
       }else{
 
          setCurrentPage(currentPage + 1)

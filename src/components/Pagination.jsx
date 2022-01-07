@@ -39,7 +39,7 @@ const Pagination = ({
   return (
     <nav aria-label="Page navigation example" className="px-2">
       <ul className="pagination   justify-content-center">
-        <li className="page-item " onClick={() => prev()}>
+        <li  className={ (currentPage === 1) ? "page-item d-none" : "page-item"} onClick={() => prev()}>
           <span className="page-link" aria-label="Previous">
             <span aria-hidden="true">«</span>
           </span>
@@ -58,7 +58,7 @@ const Pagination = ({
           </li>
         ))}
 
-        <li className="page-item" onClick={() => next()}>
+        <li className={ (currentPage === totalPages) ? "page-item d-none" : "page-item"} onClick={() => next()} id="next">
           <span className="page-link" aria-label="Next">
             <span aria-hidden="true">»</span>
           </span>
