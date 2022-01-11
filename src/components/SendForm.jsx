@@ -30,6 +30,7 @@ const SendForm = ({ gift }) => {
     data = {
       nombre: formData.get("nombre"),
       apellido: formData.get("apellido"),
+      email: formData.get("email"),
       id: gift.id,
     };
 
