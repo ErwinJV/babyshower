@@ -29,6 +29,8 @@ const Gift = ({ gifts, loading }) => {
                 {gift.attributes.nombre}
               </CardText>
 
+                  <a href={gift.attributes.enlace} target={"_blank"} className="btn text-white bg-danger mb-2 rounded-pill">Ver en tienda</a>
+
               {gift.attributes.apartado ? (
                 <span className="apartado btn btn-secondary rounded-pill ">
                   Apartado
