@@ -25,11 +25,11 @@ const Gift = ({ gifts, loading }) => {
               height="180"
             />
             <CardBody className="position-relative d-flex flex-column align-items-center">
-              <CardText className="w-100 align-self-start text-center font-questrial fw-bolder ">
+              <CardText className="w-100 mb-0 align-self-start text-center font-questrial fw-bolder ">
                 {gift.attributes.nombre}
               </CardText>
 
-                  <a href={gift.attributes.enlace} target={"_blank"} className="btn text-white bg-danger mb-2 rounded-pill">Ver en tienda</a>
+                  <a href={gift.attributes.enlace} target={"_blank"} className=" text-decoration-none text-danger mb-1 ">Ver en tienda</a>
 
               {gift.attributes.apartado ? (
                 <span className="apartado btn btn-secondary rounded-pill ">
