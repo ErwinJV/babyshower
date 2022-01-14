@@ -49,7 +49,7 @@ const Pagination = ({
           <li
             key={number}
             className={
-              currentPage === number ? "page-item active animate__animated animate__fadeIn animate__delay-2s" : "page-item"
+              currentPage === number ? "page-item active " : "page-item"
             }
           >
             <span onClick={() => paginate(number)} class="page-link">

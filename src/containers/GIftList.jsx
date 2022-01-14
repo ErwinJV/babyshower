@@ -6,7 +6,7 @@ import belenStarRight from "../assets/img/belen-stars-right.webp";
 import axios from "axios";
 
 const GIftList = () => {
-  const API = process.env.REACT_APP_API_URL + `/api/regalos`;
+  const API = process.env.REACT_APP_API_URL + `/api/regalos?sort=nombre`;
   const [total,setTotal] = useState()
   const [gifts, setGifts] = useState([]);
   const [loading, setLoading] = useState(false);
