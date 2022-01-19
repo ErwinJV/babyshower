@@ -11,7 +11,7 @@ const ThankYou = () => {
   const [minutes, setMinutes] = useState();
   const [days, setDays] = useState();
 
-  let deadline = "Feb 05 2022 10:32:53 GMT-0500";
+  let deadline = "Feb 05 2022 5:00:00 GMT-0500";
 
   const remainTime = (deadline) => {
     let time = new Date();
@@ -82,7 +82,7 @@ const ThankYou = () => {
         </div>
 
         <img src={starright} className="  d-xl-block" alt="" />
-   <Streaming />
+  
         
       </div>
     </div>
