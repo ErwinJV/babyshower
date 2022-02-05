@@ -10,7 +10,7 @@ const ThankYou = () => {
   const [minutes, setMinutes] = useState();
   const [days, setDays] = useState();
 
-  const [deadline, setDeadline] = useState("Feb 05 2022 5:00:00 GMT-0500");
+  const [deadline, setDeadline] = useState("Feb 05 2022 17:00:00 GMT-0500");
 
   const remainTime = (deadline) => {
     let time = new Date();
@@ -31,8 +31,11 @@ const ThankYou = () => {
     setHours(remainHours);
     setDays(remainDays);
 
-   /* if(remainSeconds == 00 && remainMinutes == 00 && 
-      )*/
+    if(seconds <= 0 && minutes <= 0 && hours <= 0 && days <= 0){
+        
+        
+
+      }
   };
 
   const countdown = (deadline) => {
