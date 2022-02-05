@@ -5,7 +5,7 @@ import React from 'react';
 const WelcomeHeader = () => {
     return (
         <div className='welcome container '>
-           <div className='welcome-header position-relative  d-flex '>
+           <div className='welcome-header position-relative  d-flex justify-content-center '>
                 <div className='d-flex flex-column welcome-text position-absolute justify-content-center align-items-center  ' >
                     <h1 className=' fs-md-1 mb-3  text-center align-self-center ' id='welcome-title'>
                     ¡BIENVENIDOS A NUESTRO MUNDO!
