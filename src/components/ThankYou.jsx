@@ -10,7 +10,7 @@ const ThankYou = () => {
   const [minutes, setMinutes] = useState();
   const [days, setDays] = useState();
 
-  const [deadline, setDeadline] = useState("Feb 05 2022 16:00:00 GMT-0600");
+  const [deadline, setDeadline] = useState("Feb 05 2022 16:00:00 UTC-5");
 
   const remainTime = (deadline) => {
     let time = new Date();
@@ -48,14 +48,14 @@ const ThankYou = () => {
     const welcomeText = document.getElementById("welcome-text");
     const countdown = document.getElementById("countdown");
     let now = new Date();
-    console.log(now.getHours());
+    console.log(hours);
 
     if (now.getFullYear() === 2022) {
       if (
         now.getDate() === 5 &&
         now.getMonth() === 1 &&
-        now.getHours() >= 16 &&
-        now.getHours() < 21
+        hours <= 0 &&
+        now.getHours() < 23
       ) {
         welcomeTitle.innerHTML =
           "¡Ingresa ahora a la trasmisión de nuestro babyshower!";
