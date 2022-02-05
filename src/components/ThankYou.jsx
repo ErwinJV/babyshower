@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import starleft from "../assets/img/happy-star-left.webp";
 import starright from "../assets/img/happy-star-right.webp";
@@ -10,14 +10,12 @@ const ThankYou = () => {
   const [minutes, setMinutes] = useState();
   const [days, setDays] = useState();
 
-  const [deadline, setDeadline] = useState("Feb 05 2022 17:00:00 GMT-0500");
+  const [deadline, setDeadline] = useState("Feb 05 2022 16:00:00 GMT-0600");
 
   const remainTime = (deadline) => {
     let time = new Date();
     let hora = time.getHours();
     let minutos = time.getMinutes();
-
-   
 
     let now = new Date(),
       remainTime = (new Date(deadline) - now + 1000) / 1000,
@@ -30,12 +28,6 @@ const ThankYou = () => {
     setMinutes(remainMinutes);
     setHours(remainHours);
     setDays(remainDays);
-
-    if(seconds <= 0 && minutes <= 0 && hours <= 0 && days <= 0){
-        
-        
-
-      }
   };
 
   const countdown = (deadline) => {
@@ -46,26 +38,59 @@ const ThankYou = () => {
 
   const showStreaming = () => {
     document.getElementById("clock").classList.add = "d-none";
-    document.getElementById("contenedor").innerHTML ="<Streaming />"
+    document.getElementById("contenedor").innerHTML = "<Streaming />";
   };
 
   countdown(deadline);
 
+  useEffect(() => {
+    const welcomeTitle = document.getElementById("welcome-title");
+    const welcomeText = document.getElementById("welcome-text");
+    const countdown = document.getElementById("countdown");
+    let now = new Date();
+    console.log(now.getHours());
+
+    if (now.getFullYear() === 2022) {
+      if (
+        now.getDate() === 5 &&
+        now.getMonth() === 1 &&
+        now.getHours() >= 16 &&
+        now.getHours() < 21
+      ) {
+        welcomeTitle.innerHTML =
+          "¡Ingresa ahora a la trasmisión de nuestro babyshower!";
+        welcomeText.innerHTML =
+          "<a href='https://us04web.zoom.us/j/9625565005?pwd=QW83bWFrL1ZDMStBOElIQUIzazZMZz09' class='btn btn-lg bg-announce animate__animated animate__rubberBand animate__repeat-3 rounded-pill fw-bolder text-white' target='_blank' >Unete! </a> ";
+
+        countdown.innerHTML =
+          "<h4 class='fw-bolder text-center align-self-center'>Ya el babyshower ha comenzado!</h4>";
+      } else if (now.getMonth() > 1 ) {
+
+        countdown.innerHTML =
+        "<h4 class='fw-bolder text-center align-self-center'>Ya el babyshower finalizo hace tiempo!</h4>";
+      } 
+    } else {
+
+      countdown.innerHTML =
+        "<h4 class='fw-bolder text-center align-self-center'>Ya el babyshower finalizo hace tiempo!</h4>";
+    }
+  });
+
   return (
     <div className="container-fluid  time-counter px-0 ">
-     
-    
       <div className="contenedor w-100  bg-primary d-flex justify-content-center justify-content-xl-between">
         <img src={starleft} className=" d-none d-xl-block " alt="" />
-        
-      
+
         <div
           className="clock  d-flex flex-column align-self-center justify-content-around  rounded-circle bg-light p-2"
           id="clock"
         >
           <span className="fs-2 align-self-center ">Babyshower</span>
 
-          <div className="countdown align-self-center d-flex justify-content-around  ">
+          <div
+            className="countdown align-self-center d-flex justify-content-around"
+            id="countdown"
+          >
             <div className="d-flex flex-column  fw-bolder   fs-2">
               <span className="align-self-center">{days}</span>
               <span className="fs-6 fw-normal align-self-center">Days</span>
