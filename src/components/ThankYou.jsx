@@ -20,7 +20,7 @@ const ThankYou = () => {
     let now = new Date(),
       remainTime = (new Date(deadline) - now + 1000) / 1000,
       remainSeconds = ("0" + Math.floor(remainTime % 60)).slice(-2),
-      remainMinutes = ("0" + Math.floor((remainTime / 60) % 60)).slice(-3),
+      remainMinutes = ("0" + Math.floor((remainTime / 60) % 60)).slice(-2),
       remainHours = ("0" + Math.floor((remainTime / 3600) % 24)).slice(-2),
       remainDays = ("0" + Math.floor(remainTime / (3600 * 24))).slice(-2);
 
@@ -48,14 +48,13 @@ const ThankYou = () => {
     const welcomeText = document.getElementById("welcome-text");
     const countdown = document.getElementById("countdown");
     let now = new Date();
-    console.log(minutes);
+    console.log(hours);
 
     if (now.getFullYear() === 2022) {
       if (
         now.getDate() === 5 &&
         now.getMonth() === 1 &&
         hours <= 0 &&
-        minutes <= 0 &&
         now.getHours() < 23
       ) {
         welcomeTitle.innerHTML =
