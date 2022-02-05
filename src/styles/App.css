@@ -2,6 +2,31 @@
   font-family: "Lato", sans-serif;
 }
 
+/*Altura de la camara*/
+.jss9 {
+ 
+  height:500px  !important;
+  width: 95vw !important;
+}
+
+.jss23 {
+  width: 95vw;
+  height: 450px;
+
+}
+
+.jss46 {
+  top: 0px !important;
+  left: 0px !important;
+  width: 95vw !important;
+  height: 450px !important;
+  
+}
+
+/*Controles*/
+.jss51{
+  margin-top: 70px !important;
+} 
 .nav-site img {
   width: 120px;
 }

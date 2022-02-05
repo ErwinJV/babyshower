@@ -10,6 +10,7 @@
     "@testing-library/jest-dom": "^5.16.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "@zoomus/websdk": "^2.2.0",
     "animate.css": "^4.1.1",
     "animate.css-react": "^1.1.0",
     "axios": "^0.24.0",
