@@ -61,7 +61,7 @@ const Streaming = () => {
               signature: signature,
               meetingNumber: meetingNumber,
               password: password,
-              userName: "Erwin"
+              userName: "Derwin"
             })
           }
         });
