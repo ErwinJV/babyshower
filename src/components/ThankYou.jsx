@@ -55,9 +55,9 @@ const ThankYou = () => {
       <div className="contenedor w-100  bg-primary d-flex justify-content-center justify-content-xl-between">
         <img src={starleft} className=" d-none d-xl-block " alt="" />
         
-        <Streaming />
+      
         <div
-          className="clock d-none d-flex flex-column align-self-center justify-content-around  rounded-circle bg-light p-2"
+          className="clock  d-flex flex-column align-self-center justify-content-around  rounded-circle bg-light p-2"
           id="clock"
         >
           <span className="fs-2 align-self-center ">Babyshower</span>
